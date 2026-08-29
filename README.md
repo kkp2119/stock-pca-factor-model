@@ -37,17 +37,17 @@ During major market events — the COVID-19 crash, the 2022 rate-hike cycle — 
 
 Average pairwise correlation across the 20-stock universe sits around 0.2–0.3 in calm periods but spikes above 0.75 during the COVID-19 crash and stays elevated through the 2022 rate cycle — direct evidence that returns are not independent.
 
-<img src="fig1_rolling_corr.png" width="800">
+<img src="img/fig1_rolling_corr.png" width="800">
 
 *Rolling 60-day average pairwise correlation, 2016–2025. Correlation spikes sharply during COVID-19 and remains elevated through the 2022 rate cycle.*
 
 The first five principal components explain **~70.4%** of total variance (41.9% / 12.8% / 7.8% / 4.2% / 3.7% for PC1–PC5), and the scree plot flattens sharply after that.
 
-<img src="fig3_scree.png" width="600">
+<img src="img/fig3_scree.png" width="600">
 
 ### 2. The components have clean economic readings
 
-<img src="fig2_pc_loadings.png" width="800">
+<img src="img/fig2_pc_loadings.png" width="800">
 
 *PC1 loads positively on every stock (a pure market factor). PC2 splits growth/tech (positive) from financials/energy (negative). PC3 is dominated by consumer staples and healthcare — a defensive/quality dimension.*
 
@@ -65,7 +65,7 @@ Regressing Apple's daily returns on PC1 and PC2 alone gives **R² = 0.629** (t-s
 
 PC1 is almost entirely the market factor (t = 205.6 on Mkt-RF). PC2 is explained by HML (t = −67.4, raw correlation −0.804). PC3 sees the largest jump from FF3→FF5, picking up RMW (t = 14.1) and CMA (t = 10.0) — a profitability/investment signature. PC4 and PC5 (R² < 0.04) look like residual, idiosyncratic noise rather than systematic risk.
 
-<img src="fig4_corr_matrix.png" width="800">
+<img src="img/fig4_corr_matrix.png" width="800">
 
 *Pairwise return correlation matrix — within-sector clustering is visible for financials (ρ > 0.80) and technology.*
 
@@ -73,19 +73,19 @@ PC1 is almost entirely the market factor (t = 205.6 on Mkt-RF). PC2 is explained
 
 The PCA tangency portfolio is highly concentrated even under a 25% per-stock cap (13 of 20 stocks get zero weight):
 
-<img src="fig6_tangency_weights.png" width="800">
+<img src="img/fig6_tangency_weights.png" width="800">
 
 In a rolling walk-forward backtest, that concentration hurts: the **equal-weight portfolio has the highest out-of-sample Sharpe ratio**, followed by SPY, while the PCA, FF3, and FF5 tangency portfolios all underperform. PCA tangency also suffers the deepest drawdown (−49.5% vs. SPY's −26.2%).
 
-<img src="fig8_oos_cum_return.png" width="800">
+<img src="img/fig8_oos_cum_return.png" width="800">
 
-<img src="fig9_oos_drawdown.png" width="800">
+<img src="img/fig9_oos_drawdown.png" width="800">
 
-<img src="fig7_rolling_sharpe.png" width="800">
+<img src="img/fig7_rolling_sharpe.png" width="800">
 
 In-sample, the picture looks very different — the PCA tangency portfolio dominates the frontier (Sharpe 1.124 vs. 0.706 equal-weight):
 
-<img src="fig10_efficient_frontier.png" width="700">
+<img src="img/fig10_efficient_frontier.png" width="700">
 
 | Portfolio | Annual Return | Annual Vol | Sharpe |
 |---|:---:|:---:|:---:|
@@ -95,7 +95,7 @@ In-sample, the picture looks very different — the PCA tangency portfolio domin
 
 The gap between the in-sample frontier and the out-of-sample backtest is the point: mean-variance optimization is highly sensitive to estimation error, and equal-weighting sidesteps that fragility entirely.
 
-<img src="fig5_drawdown_eq.png" width="800">
+<img src="img/fig5_drawdown_eq.png" width="800">
 
 ### 5. The factor structure isn't static — NVIDIA is a big part of the recent story
 
